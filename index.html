@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DynamoDB Web App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>DynamoDB Web App</h1>
+
+  <!-- UI elements for CRUD operations -->
+  <h2>Create Record</h2>
+  <input type="text" id="idInput" placeholder="ID">
+  <input type="text" id="thingsInput" placeholder="Things">
+  <input type="text" id="categoryInput" placeholder="Category">
+  <input type="text" id="quantityInput" placeholder="Quantity">
+  <button onclick="createRecord()">Create</button>
+
+  <h2>Read Records</h2>
+  <button onclick="readRecords()">Read All Records</button>
+  <div id="records"></div>
+
+  <h2>Update Record</h2>
+  <input type="text" id="updateIdInput" placeholder="ID">
+  <input type="text" id="updateThingsInput" placeholder="New Things">
+  <input type="text" id="updateCategoryInput" placeholder="New Category">
+  <input type="text" id="updateQuantityInput" placeholder="New Quantity">
+  <button onclick="updateRecord()">Update</button>
+
+  <h2>Delete Record</h2>
+  <input type="text" id="deleteInput" placeholder="ID">
+  <button onclick="deleteRecord()">Delete</button>
+
+  <!-- AWS SDK script -->
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1016.0.min.js"></script>
+  <!-- JavaScript file for application logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
